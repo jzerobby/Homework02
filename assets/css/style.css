@@ -28,11 +28,13 @@ p {
 }
 
 main {
+ display: flex;
+ flex-wrap: wrap;
  margin: 100px;
 }
 
 ul {
- display: flex;
+ display: inline;
  margin-block-start: 1em;
  margin-block-end: 1em;
  margin-inline-start: 0px;
@@ -41,7 +43,7 @@ ul {
 }
 
 li {
- display: flex;
+ display: inline;
  margin: auto 10px;
  font-size: 150%;
 }
@@ -101,7 +103,7 @@ h1 {
 
 .content {
     width: 100%;
-    display: flex;
+    display: inline;
 }
 
 .about {
@@ -137,34 +139,29 @@ h1 {
     color: rgb(239, 238, 244);
 }
 
-.contact ul li {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .mainBody img {
-    display: flex;
+    display: inline;
     margin-left: auto;
     margin-right: auto;
     width: 45%;
 }
 
 .work img {
-    display: flex;
+    display: inline;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
 }
 
 footer p {
-    display: flex;
+    display: inline;
     margin-left: auto;
     margin-right: auto;
     width: 25%;
 }
 
-@media screen and (max-width: 992px) {
-    p {
-      flex-direction: column;
+@media screen and (max-width: 768px) {
+    header, main, footer {
+        flex-direction: column;
     }
 }
